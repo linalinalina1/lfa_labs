@@ -1,0 +1,17 @@
+digraph Variant19_NDFA {
+  rankdir=LR;
+  node [shape=circle];
+
+  __start__ [shape=none,label=""];
+  __start__ -> "q0";
+
+  node [shape=doublecircle];
+  "q2";
+  node [shape=circle];
+
+  "q1" -> "q1" [label="b"];
+  "q1" -> "q2" [label="b"];
+  "q2" -> "q2" [label="b"];
+  "q0" -> "q1" [label="a"];
+  "q0" -> "q0" [label="a,b"];
+}
