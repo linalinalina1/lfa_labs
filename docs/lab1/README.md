@@ -147,6 +147,8 @@ It stores:
 #### Grammar Initialization (Variant 19)
 
 ```java
+import lab1.Grammar;
+
 public static Grammar variant19() {
     Set<String> VN = Set.of("S", "A", "B", "C");
     Set<Character> VT = Set.of('a', 'b');
@@ -201,6 +203,8 @@ The grammar is converted into a deterministic finite automaton (DFA) using the s
 - `A → a`   becomes  `δ(A, a) = X` (final state)
 
 ```java
+import lab1.FiniteAutomaton;
+
 public FiniteAutomaton toFiniteAutomaton() {
     Set<String> states = new HashSet<>(VN);
     states.add("X");
@@ -287,15 +291,21 @@ The method returns `true` only if, after processing the entire input string, the
 The `Main` class demonstrates execution of the implemented components:
 
 ```java
+import lab1.FiniteAutomaton;
+import lab1.Grammar;
+
 Grammar grammar = Grammar.variant19();
 FiniteAutomaton fa = grammar.toFiniteAutomaton();
 
 List<String> words = grammar.generate5Strings();
 
-for (String word : words) {
-        System.out.println(word + " -> " +
+for(
+String word :words){
+        System.out.
+
+println(word +" -> "+
         fa.stringBelongToLanguage(word));
-}
+        }
 ```
 
 This confirms that:
